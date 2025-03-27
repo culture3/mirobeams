@@ -1,0 +1,1 @@
+console.log("Leaderboard script loaded. Ready for API integration later.");

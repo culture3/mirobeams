@@ -1,0 +1,459 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #080808 0%, #121212 50%, #080808 100%);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #b0b0b0;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 1;
+}
+
+.update-info {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.podium-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 25px;
+    margin-top: 75px;
+    position: relative;
+    z-index: 1;
+}
+
+.podium {
+    background-color: #1a1a1a;
+    border-radius: 0;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.podium:hover {
+    transform: translateY(-5px);
+}
+
+.podium.first {
+    transform: translateY(-20px);
+    border-top: 5px solid #ffd700;
+}
+
+.podium.first::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ffd700;
+    box-shadow: 0 0 100px 9px #ffd700, 0 0 25px #ffd700;
+    z-index: -1;
+}
+
+.podium.first:hover {
+    transform: translateY(-25px);
+}
+
+.podium.second {
+    border-top: 5px solid #c0c0c0;
+}
+
+.podium.second::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #c0c0c0;
+    box-shadow: 0 0 100px 9px #c0c0c0, 0 0 25px #c0c0c0;
+    z-index: 0;
+}
+
+.podium.third {
+    border-top: 5px solid #cd7f32;
+}
+
+.podium.third::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #cd7f32;
+    box-shadow: 0 0 100px 9px #cd7f32, 0 0 25px #cd7f32;
+    z-index: 0;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.podium.first .username {
+    color: #ffd700;
+}
+
+.podium.second .username {
+    color: #c0c0c0;
+}
+
+.podium.third .username {
+    color: #cd7f32;
+}
+
+.stats {
+    font-size: 1em;
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.stats.wager-amount {
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.reward {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.list-container {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.list-header {
+    display: flex;
+    background-color: #2a2a2a;
+    padding: 8px 0;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #ff0000;
+}
+
+.header-item {
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+}
+
+.header-item:nth-child(1) {
+    flex: 0 0 50px;
+    text-align: center;
+}
+
+.header-item:nth-child(2) {
+    flex: 2;
+    text-align: left;
+}
+
+.header-item:nth-child(2) .player-header {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.header-item:nth-child(3) {
+    flex: 1.5;
+}
+
+.header-item:nth-child(4) {
+    flex: 1;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    margin-bottom: 8px;
+    min-height: 60px;
+}
+
+.list-item .placement {
+    flex: 0 0 50px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-item .info {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.list-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    position: absolute;
+    left: 10px;
+}
+
+.list-item .username {
+    font-size: 1em;
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0 0 0 60px;
+    text-align: left;
+    overflow: visible;
+    white-space: nowrap;
+}
+
+.list-item .wager {
+    flex: 1.5;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-item .reward {
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    color: #2ecc71;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: -15px;
+    position: relative;
+    z-index: 1;
+}
+
+.countdown-container {
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+
+.countdown-text {
+    margin-bottom: 5px;
+}
+
+.countdown-timer {
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 
+                 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.previous-leaderboard {
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.previous-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 0;
+    transition: background-color 0.2s ease;
+}
+
+.previous-btn:hover {
+    background-color: #CC0000;
+}
+
+.header-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-item {
+    color: #ffffff;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.menu-item:hover {
+    color: #ff0000;
+}
+
+.separator {
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent 0%, #ffffff 50%, transparent 100%);
+    opacity: 0.9;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.username-header {
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+
+.footer-content {
+    max-width: 760px;
+    margin: 40px auto 0;
+    padding: 20px 0;
+    border-top: 2px solid transparent;
+    background: linear-gradient(to right, transparent 0%, #ff0000 50%, transparent 100%) top / 100% 2px no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.footer-content .copyright {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-content .disclaimer {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.footer-content .footer-links {
+    margin-top: 10px;
+}
+
+.footer-content .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content .footer-links a:hover {
+    color: #ff0000;
+}
+
+.podium-rank {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+}
+
+.podium.first .podium-rank {
+    background-color: #ffd700;
+}
+
+.podium.second .podium-rank {
+    background-color: #c0c0c0;
+}
+
+.podium.third .podium-rank {
+    background-color: #cd7f32;
+}
+
+.podium {
+    padding-top: 35px;
+    transition: transform 0.3s ease-out;
+}
+
+.podium.first::before,
+.podium.second::before,
+.podium.third::before {
+    top: 0;
+    height: 5px;
+}
