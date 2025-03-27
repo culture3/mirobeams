@@ -37,7 +37,7 @@ h1 {
     justify-content: center;
     gap: 50px;
     margin-bottom: 25px;
-    margin-top: 75px;
+    margin-top: 55px;
     position: relative;
     z-index: 1;
     animation: fadeIn 0.1s ease-in forwards;
