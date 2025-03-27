@@ -457,3 +457,201 @@ h1 {
     top: 0;
     height: 5px;
 }
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+    .header-menu {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px; /* Increased gap for spacing between header elements */
+    }
+
+    .right-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .podium-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .podium {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* Ensure correct order: 1, 2, 3 */
+    .podium.first {
+        order: 1;
+    }
+
+    .podium.second {
+        order: 2;
+    }
+
+    .podium.third {
+        order: 3;
+    }
+
+    .logo {
+        width: 200px;
+        margin: 20px auto 0; /* Added top margin to separate from right-menu */
+        display: block;
+    }
+
+    .list-container {
+        max-width: 90%;
+    }
+
+    .list-header {
+        font-size: 0.9em;
+    }
+
+    .list-item .username {
+        font-size: 0.9em;
+    }
+
+    .list-item .wager,
+    .list-item .reward {
+        font-size: 0.85em;
+    }
+}
+
+/* Phone (up to 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-top: -15px;
+    }
+
+    .update-info {
+        font-size: 0.9em;
+        margin-bottom: 30px;
+    }
+
+    .header-menu {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        gap: 10px; /* Adjusted gap for smaller screens */
+    }
+
+    .right-menu {
+        gap: 10px;
+    }
+
+    .menu-item {
+        font-size: 0.9em;
+    }
+
+    .username-header {
+        font-size: 0.9em;
+    }
+
+    .header-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .podium-container {
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .podium {
+        width: 90%;
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    /* Ensure correct order: 1, 2, 3 */
+    .podium.first {
+        order: 1;
+    }
+
+    .podium.second {
+        order: 2;
+    }
+
+    .podium.third {
+        order: 3;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .username {
+        font-size: 1em;
+    }
+
+    .stats {
+        font-size: 0.9em;
+    }
+
+    .reward {
+        font-size: 1em;
+    }
+
+    .logo {
+        width: 150px;
+        margin: 15px auto 0; /* Added top margin to separate from right-menu */
+    }
+
+    .countdown-container {
+        font-size: 1em;
+    }
+
+    .list-container {
+        max-width: 100%;
+    }
+
+    .list-header {
+        font-size: 0.8em;
+    }
+
+    .list-item {
+        padding: 8px 0;
+        min-height: 50px;
+    }
+
+    .list-item .placement {
+        font-size: 0.9em;
+        flex: 0 0 40px;
+    }
+
+    .list-item img {
+        width: 30px;
+        height: 30px;
+        left: 5px;
+    }
+
+    .list-item .username {
+        font-size: 0.85em;
+        margin-left: 45px;
+    }
+
+    .list-item .wager {
+        font-size: 0.8em;
+    }
+
+    .list-item .reward {
+        font-size: 0.85em;
+    }
+
+    .footer-content {
+        padding: 15px 0;
+    }
+
+    .footer-content p {
+        font-size: 0.8em;
+    }
+}
